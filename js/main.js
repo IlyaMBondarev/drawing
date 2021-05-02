@@ -35,3 +35,32 @@ rangeItems.forEach((block, index) => {
 })
 
 totalBlock.innerHTML = total.toString().split('').reverse().join('').match(/.{1,3}/g).join(' ').split('').reverse().join('');
+const swiperVideos = new Swiper('.swiper-container', {
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  centeredSlides: true,
+  loop: true,
+  spaceBetween: 0,
+  slidesPerView: 3,
+});
+
+const swiperReplies = new Swiper('.swiper-container-2', {
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  centeredSlides: true,
+  loop: true,
+  spaceBetween: -350,
+  slidesPerView: 3,
+});
