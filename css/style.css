@@ -2175,10 +2175,14 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 120px;
   margin-right: 35px;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
   background: linear-gradient(93.95deg, #F36E2A 11.59%, #FEBD66 88.82%);
+}
+.cost__icon img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 @media screen and (max-width: 767px) {
   .cost__icon {
@@ -3409,6 +3413,9 @@ h1, h2, h3, h4, h5, h6 {
 .replies > * {
   position: relative;
   z-index: 2;
+}
+.replies > *.container {
+  z-index: 3;
 }
 .replies__title {
   text-align: center;
