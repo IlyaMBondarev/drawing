@@ -39,7 +39,27 @@ if (calculator) {
     totalBlock.innerHTML = total.toString().split('').reverse().join('').match(/.{1,3}/g).join(' ').split('').reverse().join('');
 }
 
+let nav = document.querySelector('.nav');
 
+function checkScroll() {
+    if (document.documentElement.scrollTop > 200) {
+        return true
+    } else {
+        return false
+    }
+}
+
+if (checkScroll()) {
+    nav.classList.add('active');
+}
+
+window.addEventListener('scroll', () => {
+    if (checkScroll()) {
+        nav.classList.add('active');
+    } else {
+        nav.classList.remove('active');
+    }
+})
 
 let navs = document.querySelectorAll('._nav');
 let blocksToScroll = document.querySelectorAll('._block-to-scroll');
@@ -60,23 +80,80 @@ navs.forEach(nav => {
 let popupBG = document.querySelector('.popup-bg');
 let popupCloser = popupBG.querySelector('.popup');
 let popupPolitics = popupBG.querySelector('.popup-politics');
+let popupBurger = popupBG.querySelector('.popup-burger');
+let popupCallback = popupBG.querySelector('.popup-callback');
+let popupThanks = popupBG.querySelector('.popup-thanks');
 
 let popupPoliticsOpeners = document.querySelectorAll('._popup-politics-opener');
+let popupBurgerOpeners = document.querySelectorAll('._popup-burger-opener');
+let popupCallbackOpeners = document.querySelectorAll('._popup-callback-opener');
+
+let popupBurgerClosers = document.querySelectorAll('._popup-burger-closer');
 
 popupCloser.addEventListener('click', (event) => {
-    if (event.target === popupCloser) {
+    event.preventDefault();
+    if (event.target === popupCloser || event.target === popupBG) {
         popupBG.classList.remove('active');
         popupPolitics.classList.remove('active');
+        popupBurger.classList.remove('active');
+        popupBurgerOpeners.forEach(opener => {
+            opener.classList.remove('active');
+        });
+        popupCallback.classList.remove('active');
+        popupThanks.classList.remove('active');
     }
 })
 
+popupBurgerClosers.forEach(closer => {
+    closer.addEventListener('click', (event) => {
+        event.preventDefault();
+        popupBG.classList.remove('active');
+        popupPolitics.classList.remove('active');
+        popupBurgerOpeners.forEach(opener => {
+            opener.classList.remove('active');
+        })
+    })
+})
+
+popupCallbackOpeners.forEach(opener => {
+    opener.addEventListener('click', (event) => {
+        event.preventDefault();
+        popupBG.classList.add('active');
+        popupCallback.classList.add('active');
+    })
+})
+
 popupPoliticsOpeners.forEach(opener => {
-    opener.addEventListener('click', () => {
+    opener.addEventListener('click', (event) => {
+        event.preventDefault();
         popupBG.classList.add('active');
         popupPolitics.classList.add('active');
     })
 })
+
+popupBurgerOpeners.forEach(opener => {
+    opener.addEventListener('click', (event) => {
+        event.preventDefault();
+        if (popupBG.classList.contains('active')) {
+            popupBG.classList.remove('active');
+            popupBurger.classList.remove('active');
+            popupBurgerOpeners.forEach(opener => {
+                opener.classList.remove('active');
+            })
+        } else {
+            popupBG.classList.add('active');
+            popupBurger.classList.add('active');
+            popupBurgerOpeners.forEach(opener => {
+                opener.classList.add('active');
+            })
+        }
+    })
+})
 const swiperVideos = new Swiper('.swiper-container', {
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -89,12 +166,6 @@ const swiperVideos = new Swiper('.swiper-container', {
     320: {
       slidesPerView: 1,
     },
-    768: {
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-      },
-    },
     1000: {
       slidesPerView: 3,
     },
@@ -102,6 +173,10 @@ const swiperVideos = new Swiper('.swiper-container', {
 });
 
 const swiperReplies = new Swiper('.swiper-container-2', {
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -113,12 +188,6 @@ const swiperReplies = new Swiper('.swiper-container-2', {
     320: {
       slidesPerView: 1,
       spaceBetween: 350,
-    },
-    768: {
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-      },
     },
     1800: {
       slidesPerView: 3,
@@ -173,6 +242,8 @@ forms.forEach(form => {
 
         if (!errors) {
             //отправка письма
+            popupBG.classList.add('active');
+            popupThanks.classList.add('active');
         }
     })
 })

@@ -108,6 +108,50 @@
                 <img src="img/logo.svg" alt="">
             </div>
         </div>
+        <div class="popup-burger">
+            <ul class="popup-burger__menu _nav">
+                <li class="_popup-burger-closer"><button class="_nav-link">О творческой нише</button></li>
+                <li class="_popup-burger-closer"><button class="_nav-link">Расчёт вашей  прибыли</button></li>
+                <li class="_popup-burger-closer"><button class="_nav-link">Открытие бизнеса под ключ</button></li>
+                <li class="_popup-burger-closer"><button class="_nav-link">Отзывы о школе Корниловой</button></li>
+            </ul>
+            <div class="popup-burger__social-links">
+                <div class="popup-burger__social-link"><a href="#"><i class="fab fa-instagram"></i></a></div>
+                <div class="popup-burger__social-link"><a href="#"><i class="fab fa-vk"></i></a></div>
+                <div class="popup-burger__social-link"><a href="#"><i class="fab fa-facebook-f"></i></a></div>
+                <div class="popup-burger__social-link"><a href="#"><i class="fab fa-youtube"></i></a></div>
+            </div>
+            <button class="popup-burger__button button">Обратный звонок</button>
+        </div>
+        <div class="popup-callback container">
+            <div class="popup-callback__image">
+                <img src="img/popups/callback_image.png" alt="">
+            </div>
+            <div class="popup-callback__main">
+                <h4 class="popup-callback__title">Укажите Ваши актуальные данные, и мы свяжемся с Вами в течении 15 минут</h4>
+                <form action="#" class="popup-callback__form form form_vertical">
+                    <div class="form__block"><input class="_req" name="name" type="text" placeholder="Имя"></div>
+                    <div class="form__block"><input class="_req" name="phone" type="tel" placeholder="Телефон"></div>
+                    <div class="form__block"><input class="_req" name="mail" type="email" placeholder="E-mail"></div>
+                    <button type="submit" class="form__button button">Обратный звонок</button>
+                </form>
+                <p class="agreement">Нажимая на кнопку &laquo;Обратный звонок&raquo;, я даю согласие на обработку персональных данных и соглашаюсь с <a href="#" class="_popup-politics-opener">политикой конфиденциальности</a></p>
+            </div>
+        </div>
+        <div class="popup-thanks container">
+            <div class="popup-thanks__image">
+                <img src="img/popups/thanks_image.png" alt="">
+            </div>
+            <div class="popup-thanks__main">
+                <h4 class="popup-thanks__title">Спасибо!</h4>
+                <p class="popup-thanks__subtitle">Ваша заявка отправлена!</p>
+                <p class="popup-thanks__text">Долго ждать?</p>
+                <p class="popup-thanks__text">Наберите нас прямо сейчас</p>
+                <div class="popup-thanks__phone">
+                    <a href="tel:+78124072829"><i class="fas fa-phone-alt"></i><span>+7 (812) 407-28-29</span></a>
+                </div>
+            </div>
+        </div>
     </div>
 </div><header class="header">
     <div class="container">
@@ -135,23 +179,38 @@
                 <li><button class="_nav-link">Отзывы о школе Корниловой</a></li>
             </ul>
             <div class="header__menu_mobile">
-                <button class="header__burger header-burger-opener"><span></span><span></span><span></span></button>
+                <button class="header__burger _popup-burger-opener"><span></span><span></span><span></span></button>
                 <div class="header__phone">
                     <a href="tel:+78124072829"><i class="fas fa-phone-alt"></i></a>
                 </div>
             </div>
         </nav>
     </div>
-</header>    <div class="content">
+</header>
+<nav class="nav _nav">
+    <ul class="nav__menu container">
+        <li><button class="_nav-link">О творческой нише</button></li>
+        <li><button class="_nav-link">Расчёт вашей  прибыли</button></li>
+        <li><button class="_nav-link">Открытие бизнеса под ключ</button></li>
+        <li><button class="_nav-link">Отзывы о школе Корниловой</button></li>
+        <li class="nav__phone"><a href="tel:+78124072829"><i class="fas fa-phone-alt"></i><span>+7 (812) 407-28-29</span></a></li>
+    </ul>
+    <div class="nav__menu_mobile">
+        <button class="nav__burger _popup-burger-opener"><span></span><span></span><span></span></button>
+        <div class="nav__phone">
+            <a href="tel:+78124072829"><i class="fas fa-phone-alt"></i></a>
+        </div>
+    </div>
+</nav>    <div class="content">
         <section class="main-screen">
             <div class="main-screen__bg">
-                <img src="img/main-screen/main-screen.jpg" alt="">
+                <img src="img/main-screen/main-screen.gif" alt="">
             </div>
             <div class="main-screen__center">
                 <h1 class="main-screen__title">Откройте художественную школу
                     для&nbsp;детей и взрослых в своем городе</h1>
                 <p class="main-screen__subtitle">Зарабатывайте <span>от 1 800 000 рублей в год,</span> делая жизнь людей ярче</p>
-                <button class="main-screen__callback-button button">Обратный звонок</button>
+                <button class="main-screen__callback-button button _popup-callback-opener">Обратный звонок</button>
             </div>
         </section>
         <section class="about _block-to-scroll">
@@ -245,6 +304,7 @@
                         <div class="form__block"><input class="_req" name="mail" type="email" placeholder="E-mail"></div>
                         <button type="submit" class="form__button button">Получить материалы</button>
                     </form>
+                    <p class="agreement">Нажимая на кнопку &laquo;Получить материалы&raquo;, я даю согласие на обработку персональных данных и соглашаюсь с <a href="#" class="_popup-politics-opener">политикой конфиденциальности</a></p>
                 </div>
             </div>
         </section>
@@ -337,6 +397,7 @@
                     <input class="_req" name="phone" type="tel" placeholder="Телефон">
                 </div>
                 <button action="submit" class="calculator__submit button">Зафиксировать прибыль</button>
+                <p class="agreement">Нажимая на кнопку &laquo;Зафиксировать прибыль&raquo;, я даю согласие на обработку персональных данных и соглашаюсь с <a href="#" class="_popup-politics-opener">политикой конфиденциальности</a></p>
             </div>
         </form>
         <section class="plan _block-to-scroll">
@@ -494,6 +555,7 @@
                             <div class="form__block"><input class="_req" name="phone" type="tel" placeholder="Телефон"></div>
                             <button type="submit" class="form__button button">Получить материалы</button>
                         </form>
+                        <p class="agreement">Нажимая на кнопку &laquo;Получить материалы&raquo;, я даю согласие на обработку персональных данных и соглашаюсь с <a href="#" class="_popup-politics-opener">политикой конфиденциальности</a></p>
                     </div>
                 </div>
             </div>
@@ -565,6 +627,7 @@
                         <div class="form__block"><input class="_req" name="mail" type="email" placeholder="E-mail"></div>
                         <button type="submit" class="form__button button">Стать частью команды</button>
                     </form>
+                    <p class="agreement">Нажимая на кнопку &laquo;Стать частью команды&raquo;, я даю согласие на обработку персональных данных и соглашаюсь с <a href="#" class="_popup-politics-opener">политикой конфиденциальности</a></p>
                 </div>
             </div>
         </section>
@@ -597,119 +660,137 @@
             <div class="replies__slider slider swiper-container-2 replies__items">
                 <div class="slider__items swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="reply">
-                            <div class="reply__photo">
-                                <img src="img/replies/photo_1.png" alt="">
-                            </div>
-                            <h5 class="reply__title">Елена Гавриченко</h5>
-                            <p class="reply__text text">Хочу сказать большое спасибо Насте за увлекательные и полезные занятия! Моей Дашульке 6 лет! Она уже или еще только месяц занимается с Настей рисованием! Результатом каждого занятия является настоящий шедевр и, что очень важно, восторг моего ребенка! ...</p>
-                            <p class="reply__date">12.03.2021</p>
-                            <div class="reply__quotes">
-                                <img src="img/replies/quotes.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="reply">
-                            <div class="reply__photo">
-                                <img src="img/replies/photo_2.png" alt="">
-                            </div>
-                            <h5 class="reply__title">Елена Загорулько</h5>
-                            <p class="reply__text text">Моя дочь София занимается с Анастасией второй год. Занятия проходят в дружеской обстановке. Для творческого процесса это важно. И как результат-прекрасные работы.</p>
-                            <p class="reply__date">12.03.2021</p>
-                            <div class="reply__quotes">
-                                <img src="img/replies/quotes.svg" alt="">
+                        <div class="reply-bg">
+                            <div class="reply">
+                                <div class="reply__photo">
+                                    <img src="img/replies/photo_1.png" alt="">
+                                </div>
+                                <h5 class="reply__title">Елена Гавриченко</h5>
+                                <p class="reply__text text">Хочу сказать большое спасибо Насте за увлекательные и полезные занятия! Моей Дашульке 6 лет! Она уже или еще только месяц занимается с Настей рисованием! Результатом каждого занятия является настоящий шедевр и, что очень важно, восторг моего ребенка! ...</p>
+                                <p class="reply__date">12.03.2021</p>
+                                <div class="reply__quotes">
+                                    <img src="img/replies/quotes.svg" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="reply">
-                            <div class="reply__photo">
-                                <img src="img/replies/photo_3.png" alt="">
-                            </div>
-                            <h5 class="reply__title">Ирина Арутюнян</h5>
-                            <p class="reply__text text">Имела удовольствие заниматься с Анастасией акварельной живописью.Это было удивительно). Настя очень внимательный педагог,умеющий найти индивидуальный подход к каждому ученику.Огромное спасибо! Всегда с нетерпением жду занятий)</p>
-                            <p class="reply__date">12.03.2021</p>
-                            <div class="reply__quotes">
-                                <img src="img/replies/quotes.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="reply">
-                            <div class="reply__photo">
-                                <img src="img/replies/photo_4.png" alt="">
-                            </div>
-                            <h5 class="reply__title">Ирина Баранова</h5>
-                            <p class="reply__text text">Нам очень нравится Анастасия! Моей дочери 9 лет и нам нужен был не только профессиональный художник,но и человек умеющий найти подход к подростку! Анастасия с первого занятия нашла общий язык с дочкой! Она прекрасно развивает воображение у ребенка, цветовосприятие...</p>
-                            <p class="reply__date">12.03.2021</p>
-                            <div class="reply__quotes">
-                                <img src="img/replies/quotes.svg" alt="">
+                        <div class="reply-bg">
+                            <div class="reply">
+                                <div class="reply__photo">
+                                    <img src="img/replies/photo_2.png" alt="">
+                                </div>
+                                <h5 class="reply__title">Елена Загорулько</h5>
+                                <p class="reply__text text">Моя дочь София занимается с Анастасией второй год. Занятия проходят в дружеской обстановке. Для творческого процесса это важно. И как результат-прекрасные работы.</p>
+                                <p class="reply__date">12.03.2021</p>
+                                <div class="reply__quotes">
+                                    <img src="img/replies/quotes.svg" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="reply">
-                            <div class="reply__photo">
-                                <img src="img/replies/photo_5.png" alt="">
-                            </div>
-                            <h5 class="reply__title">Мария Лубская</h5>
-                            <p class="reply__text text">Занимаемся с Анастасией уже 2 года. У нее прекрасные занятия. Анастасия очень интересный, творческий человек. Я всегда очень жду встречи с ней.</p>
-                            <p class="reply__date">12.03.2021</p>
-                            <div class="reply__quotes">
-                                <img src="img/replies/quotes.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="reply">
-                            <div class="reply__photo">
-                                <img src="img/replies/photo_6.png" alt="">
-                            </div>
-                            <h5 class="reply__title">Милена Горская</h5>
-                            <p class="reply__text text">О студии мы узнали, заходя в парадную дома, в котором живет моя бабушка, мы увидели объявление и я сразу обрадовалась, потому что на самом деле, давно хотела учиться рисованию. Я, конечно, ходила, но давно ,и то мне не нравилось. Но когда я пришла на занятие к Анастасии ...</p>
-                            <p class="reply__date">12.03.2021</p>
-                            <div class="reply__quotes">
-                                <img src="img/replies/quotes.svg" alt="">
+                        <div class="reply-bg">
+                            <div class="reply">
+                                <div class="reply__photo">
+                                    <img src="img/replies/photo_3.png" alt="">
+                                </div>
+                                <h5 class="reply__title">Ирина Арутюнян</h5>
+                                <p class="reply__text text">Имела удовольствие заниматься с Анастасией акварельной живописью.Это было удивительно). Настя очень внимательный педагог,умеющий найти индивидуальный подход к каждому ученику.Огромное спасибо! Всегда с нетерпением жду занятий)</p>
+                                <p class="reply__date">12.03.2021</p>
+                                <div class="reply__quotes">
+                                    <img src="img/replies/quotes.svg" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="reply">
-                            <div class="reply__photo">
-                                <img src="img/replies/photo_7.png" alt="">
-                            </div>
-                            <h5 class="reply__title">Ирина Белобородова</h5>
-                            <p class="reply__text text">Занимаемся с Анастасией уже 2 года. У нее прекрасные занятия. Анастасия очень интересный, творческий человек. Я всегда очень жду встречи с ней.</p>
-                            <p class="reply__date">12.03.2021</p>
-                            <div class="reply__quotes">
-                                <img src="img/replies/quotes.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="reply">
-                            <div class="reply__photo">
-                                <img src="img/replies/photo_8.png" alt="">
-                            </div>
-                            <h5 class="reply__title">Мария Лубская</h5>
-                            <p class="reply__text text">Хочу сказать Анастасии, огpомное спасибо за ее работу. Она замечательный педагог, смогла найти общий язык с моими мальчиками, такими разными по характеру и возврату (6 и 8 лет). Их совместные работы всегда разные, яркие и приносящие позитив.</p>
-                            <p class="reply__date">12.03.2021</p>
-                            <div class="reply__quotes">
-                                <img src="img/replies/quotes.svg" alt="">
+                        <div class="reply-bg">
+                            <div class="reply">
+                                <div class="reply__photo">
+                                    <img src="img/replies/photo_4.png" alt="">
+                                </div>
+                                <h5 class="reply__title">Ирина Баранова</h5>
+                                <p class="reply__text text">Нам очень нравится Анастасия! Моей дочери 9 лет и нам нужен был не только профессиональный художник,но и человек умеющий найти подход к подростку! Анастасия с первого занятия нашла общий язык с дочкой! Она прекрасно развивает воображение у ребенка, цветовосприятие...</p>
+                                <p class="reply__date">12.03.2021</p>
+                                <div class="reply__quotes">
+                                    <img src="img/replies/quotes.svg" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="reply">
-                            <div class="reply__photo">
-                                <img src="img/replies/photo_9.png" alt="">
+                        <div class="reply-bg">
+                            <div class="reply">
+                                <div class="reply__photo">
+                                    <img src="img/replies/photo_5.png" alt="">
+                                </div>
+                                <h5 class="reply__title">Мария Лубская</h5>
+                                <p class="reply__text text">Занимаемся с Анастасией уже 2 года. У нее прекрасные занятия. Анастасия очень интересный, творческий человек. Я всегда очень жду встречи с ней.</p>
+                                <p class="reply__date">12.03.2021</p>
+                                <div class="reply__quotes">
+                                    <img src="img/replies/quotes.svg" alt="">
+                                </div>
                             </div>
-                            <h5 class="reply__title">Оксана Колесник</h5>
-                            <p class="reply__text text">Спасибо Вам огромное!) Посетили мастер класс с дочкой, не знали чем скрасить наш досуг, решили масляными красками))))) очень приятная атмосфера, Анастасия мила и очаровательна! И дочке и мне очень понравилось, за одно занятие мы написали отличные картины!!!</p>
-                            <p class="reply__date">12.03.2021</p>
-                            <div class="reply__quotes">
-                                <img src="img/replies/quotes.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="reply-bg">
+                            <div class="reply">
+                                <div class="reply__photo">
+                                    <img src="img/replies/photo_6.png" alt="">
+                                </div>
+                                <h5 class="reply__title">Милена Горская</h5>
+                                <p class="reply__text text">О студии мы узнали, заходя в парадную дома, в котором живет моя бабушка, мы увидели объявление и я сразу обрадовалась, потому что на самом деле, давно хотела учиться рисованию. Я, конечно, ходила, но давно ,и то мне не нравилось. Но когда я пришла на занятие к Анастасии ...</p>
+                                <p class="reply__date">12.03.2021</p>
+                                <div class="reply__quotes">
+                                    <img src="img/replies/quotes.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="reply-bg">
+                            <div class="reply">
+                                <div class="reply__photo">
+                                    <img src="img/replies/photo_7.png" alt="">
+                                </div>
+                                <h5 class="reply__title">Ирина Белобородова</h5>
+                                <p class="reply__text text">Занимаемся с Анастасией уже 2 года. У нее прекрасные занятия. Анастасия очень интересный, творческий человек. Я всегда очень жду встречи с ней.</p>
+                                <p class="reply__date">12.03.2021</p>
+                                <div class="reply__quotes">
+                                    <img src="img/replies/quotes.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="reply-bg">
+                            <div class="reply">
+                                <div class="reply__photo">
+                                    <img src="img/replies/photo_8.png" alt="">
+                                </div>
+                                <h5 class="reply__title">Мария Лубская</h5>
+                                <p class="reply__text text">Хочу сказать Анастасии, огpомное спасибо за ее работу. Она замечательный педагог, смогла найти общий язык с моими мальчиками, такими разными по характеру и возврату (6 и 8 лет). Их совместные работы всегда разные, яркие и приносящие позитив.</p>
+                                <p class="reply__date">12.03.2021</p>
+                                <div class="reply__quotes">
+                                    <img src="img/replies/quotes.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="reply-bg">
+                            <div class="reply">
+                                <div class="reply__photo">
+                                    <img src="img/replies/photo_9.png" alt="">
+                                </div>
+                                <h5 class="reply__title">Оксана Колесник</h5>
+                                <p class="reply__text text">Спасибо Вам огромное!) Посетили мастер класс с дочкой, не знали чем скрасить наш досуг, решили масляными красками))))) очень приятная атмосфера, Анастасия мила и очаровательна! И дочке и мне очень понравилось, за одно занятие мы написали отличные картины!!!</p>
+                                <p class="reply__date">12.03.2021</p>
+                                <div class="reply__quotes">
+                                    <img src="img/replies/quotes.svg" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -740,6 +821,7 @@
                         <div class="form__block"><input class="_req" name="city" type="text" placeholder="Город"></div>
                         <button type="submit" class="form__button button">Проверить город</button>
                     </form>
+                    <p class="agreement">Нажимая на кнопку &laquo;Проверить город&raquo;, я даю согласие на обработку персональных данных и соглашаюсь с <a href="#" class="_popup-politics-opener">политикой конфиденциальности</a></p>
                 </div>
             </div>
         </section>
