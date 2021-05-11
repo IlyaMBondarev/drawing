@@ -49,6 +49,10 @@
   width: 100%;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .button {
   position: relative;
   display: flex;
@@ -728,8 +732,6 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   align-items: center;
   padding-top: 50px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
   display: none;
@@ -768,7 +770,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .popup-bg .popup-burger__social-link {
   margin-left: 13px;
-  margin-bottom: 13px;
+  margin-right: 13px;
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -1083,7 +1085,7 @@ h1, h2, h3, h4, h5, h6 {
 .header__menu {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: calc(50% - 142px);
 }
@@ -1652,21 +1654,18 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 25px;
     margin-left: 10px;
     margin-right: 10px;
-    max-width: calc(50% - 20px);
-  }
-  .about__image img {
-    width: 100%;
+    max-width: calc(50% - 20px) !important;
   }
 }
 @media screen and (max-width: 767px) {
   .about__image {
-    max-width: none;
-    width: 50%;
-    min-width: 290px;
+    width: 50% !important;
+    min-width: 290px !important;
   }
 }
 .about__image:nth-of-type(1) {
   right: 269px;
+  width: 439px;
 }
 @media screen and (max-width: 1850px) {
   .about__image:nth-of-type(1) {
@@ -1683,6 +1682,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 267px;
   border: 20px solid #ffffff;
   z-index: 1;
+  width: 479px;
 }
 @media screen and (max-width: 1600px) {
   .about__image:nth-of-type(2) {
@@ -1692,12 +1692,16 @@ h1, h2, h3, h4, h5, h6 {
 .about__image:nth-of-type(3) {
   right: 430px;
   top: 437px;
+  width: 350px;
 }
 @media screen and (max-width: 1850px) {
   .about__image:nth-of-type(3) {
     top: 480px;
     right: 250px;
   }
+}
+.about__image img {
+  width: 100%;
 }
 .about__content {
   position: relative;
@@ -2203,7 +2207,12 @@ h1, h2, h3, h4, h5, h6 {
 .calculator {
   position: relative;
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 150px;
+}
+@media screen and (max-width: 1000px) {
+  .calculator {
+    margin-bottom: 50px;
+  }
 }
 .calculator__main {
   background: #FFFFFF;
@@ -3110,7 +3119,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: -80px;
   }
   .care__image img {
-    max-width: 600px;
+    width: 600px;
   }
 }
 
@@ -3948,7 +3957,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .footer__social-links {
   display: flex;
-  justify-content: start;
+  justify-content: flex-end;
   align-items: center;
   margin-bottom: 20px;
 }

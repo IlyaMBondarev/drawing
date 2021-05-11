@@ -6,7 +6,7 @@ if (calculator) {
     let rangeItems = calculator.querySelectorAll('.range');
     let totalBlock = calculator.querySelector('.total');
 
-    let rangeCounts = [875, 750, 1100]; //цена за 1 абонемент
+    let rangeCounts = [7000, 3500, 1100]; //цена за 1 абонемент
     let total = 0;
 
     rangeItems.forEach((block, index) => {
