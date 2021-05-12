@@ -229,7 +229,9 @@ forms.forEach(form => {
         })
     })
 
-    form.addEventListener('submit', (event) => {
+    form.addEventListener('submit', formSend);
+    
+    async function formSend(event) {
         event.preventDefault();
         let errors = 0;
 
@@ -240,10 +242,23 @@ forms.forEach(form => {
             }
         })
 
+        let formData = new FormData(form);
+
         if (!errors) {
             //отправка письма
-            popupBG.classList.add('active');
-            popupThanks.classList.add('active');
+            let response = await fetch('sendmail.php', {
+                method: 'POST',
+                body: formData
+            });
+
+            if (response.ok) {
+                let result = await response.json();
+                popupBG.classList.add('active');
+                popupThanks.classList.add('active');
+                form.reset();
+            } else {
+                alert('Произошла ошибка. Пожалуйста, попробуйте ещё раз');
+            }
         }
-    })
+    }
 })
